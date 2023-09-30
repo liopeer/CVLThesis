@@ -30,6 +30,8 @@
 \usepackage[backend=biber, bibencoding=utf8]{biblatex}
 \bibliography{bib/references}
 \usepackage{csquotes}
+\usepackage[hidelinks=true]{hyperref}
+\usepackage{bm}
 % ====================================================
 
 
@@ -57,6 +59,8 @@
 % Title page, modify accordingly
 \input{chap/title.tex}
 \cleardoublepage
+
+\frontmatter
 
 \input{chap/abstract.tex}
 
@@ -90,7 +94,7 @@
 \newpage
 
 \pagenumbering{arabic}
-
+\mainmatter
 %% ----------------------------------------------------------------------------
 % Actual text comes here - defer it to other files and use \input{bla.tex}, ..
 %% ----------------------------------------------------------------------------
@@ -101,12 +105,11 @@
 \input{chap/discussion.tex}
 \input{chap/conclusion.tex}
 
-\printbibliography[title=References]
-
 
 %% ----------------------------------------------------------------------------
 % If Appendix is needed
 %% ----------------------------------------------------------------------------
+\printbibliography[title=References]
 \appendix
 \input{chap/appendix.tex}
 

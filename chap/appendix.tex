@@ -6,10 +6,46 @@
 %% ----------------------------------------------------------------------------
 \chapter{The First Appendix}
 
-In the appendix, list the following material: 
+In the appendix, list the following material:
 
 \begin{itemize}
- \item Data (evaluation tables, graphs etc.)
- \item Program code
- \item Further material 
+    \item Data (evaluation tables, graphs etc.)
+    \item Program code
+    \item Further material
 \end{itemize}
+
+\chapter{Extended Derivations}
+\section{Forward Process Closed-Form}
+\label{app:forward}
+Starting with transition distributions
+\begin{equation}
+    q(\bm{x}_t|\bm{x}_{t-1}) = \mathcal{N}(\sqrt{1-\beta_t} \bm{x}_{t-1}, \beta_t I)
+\end{equation}
+the reparameterization $\alpha = 1 - \beta$ is introduced
+\begin{equation}
+    q(\bm{x}_t|\bm{x}_{t-1}) = \mathcal{N}(\sqrt{\alpha_t} \bm{x}_{t-1}, (1-\alpha) I)
+\end{equation}
+which can also be formulated as
+\begin{equation}
+    q(\bm{x}_t|\bm{x}_{t-1}) = \sqrt{\alpha_t}\bm{x}_{t-1} + \sqrt{1-\alpha_t}\mathcal{N}(\bm{0}, \bm{I}).
+\end{equation}
+For coherent indexing it is beneficial to switch to notation using random variables
+\begin{equation}
+    \bm{x}_{t} = \sqrt{\alpha_t}\bm{x}_{t-1} + \sqrt{1-\alpha_t}\bm{\epsilon_{t-1}}
+    \label{eq:forward_randomvar}
+\end{equation}
+where $\bm{\epsilon_{t-1}} \sim \mathcal{N}(\bm{0}, \bm{I})$ and the earlier $\bm{x}_t$ can be recursively inserted into the formula. Recalling that the sum $Z = X + Y$ of two normally distributed random variables $X \sim \mathcal{N}(\mu_X, \sigma_Y^2)$ and $Y \sim \mathcal{N}(\mu_Y, \sigma_Y^2)$ is again normally distributed according to $Z \sim \mathcal{N}(\mu_X + \mu_Y, \sigma_X^2 + \sigma_Y^2)$
+\begin{align}
+    x_t & = \sqrt{\alpha_t} \left( \sqrt{\alpha_{t-1}} \bm{x}_{t-2} + \sqrt{1-\alpha_{t-1}}\bm{\epsilon}_{t-2} \right) + \sqrt{1-\alpha_{t}} \bm{\epsilon}_{t-1} \\
+        & = \sqrt{\alpha_{t}\alpha_{t-1}} \bm{x}_{t-2} + \sqrt{\alpha_{t}(1-\alpha_{t-1})} \bm{\epsilon}_{t-2} + \sqrt{1-\alpha_{t}} \bm{\epsilon}_{t-1}         \\
+        & = \sqrt{\alpha_{t}\alpha_{t-1}} \bm{x}_{t-2} + \sqrt{\alpha_{t}(1-\alpha_{t-1}) + (1-\alpha_{t})} \bm{\bar{\epsilon}}_{t-2}
+\end{align}
+where $\bm{\bar{\epsilon}}_{t-2}$ is the sum of the random variables up to $t-2$ (again Gaussian). The second term can of course be simplified to
+\begin{equation}
+    \bm{x}_t = \sqrt{\alpha_{t}\alpha_{t-1}} \bm{x}_{t-2} + \sqrt{1-\alpha_t\alpha_{t-1}} \bm{\bar{\epsilon}}_{t-2}
+\end{equation}
+which is exactly the same form as in Eq.~\ref{eq:forward_randomvar}. Therefore the final form is
+\begin{equation}
+    \bm{x}_t = \sqrt{\bar{\alpha}_{t}} \bm{x}_{t-2} + \sqrt{1-\bar{\alpha}_{t}} \bm{\bar{\epsilon}}_{t-2}
+\end{equation}
+with $\bar{\alpha_t} = \prod_{s=1}^{t}\alpha_s$ as before.
