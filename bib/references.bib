@@ -18,10 +18,48 @@
   year    = {1989}
 }
 
-@misc{kingma2022autoencoding,
+@misc{ronneberger2015unet,
+  title         = {U-Net: Convolutional Networks for Biomedical Image Segmentation},
+  author        = {Olaf Ronneberger and Philipp Fischer and Thomas Brox},
+  year          = {2015},
+  eprint        = {1505.04597},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV}
+}
+
+@article{moon1996emalgorithm,
+  author  = {Moon, T.K.},
+  journal = {IEEE Signal Processing Magazine},
+  title   = {The expectation-maximization algorithm},
+  year    = {1996},
+  volume  = {13},
+  number  = {6},
+  pages   = {47-60},
+  doi     = {10.1109/79.543975}
+}
+
+@misc{luo2022understanding,
+  title         = {Understanding Diffusion Models: A Unified Perspective},
+  author        = {Calvin Luo},
+  year          = {2022},
+  eprint        = {2208.11970},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG}
+}
+
+@misc{vaswani2017attention,
+  title         = {Attention Is All You Need},
+  author        = {Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},
+  year          = {2017},
+  eprint        = {1706.03762},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL}
+}
+
+@misc{kingma2013autoencoding,
   title         = {Auto-Encoding Variational Bayes},
   author        = {Diederik P Kingma and Max Welling},
-  year          = {2022},
+  year          = {2013},
   eprint        = {1312.6114},
   archiveprefix = {arXiv},
   primaryclass  = {stat.ML}
@@ -86,11 +124,193 @@
   primaryclass  = {stat.ML}
 }
 
+@article{mnist,
+  author  = {Deng, Li},
+  journal = {IEEE Signal Processing Magazine},
+  title   = {The MNIST Database of Handwritten Digit Images for Machine Learning Research [Best of the Web]},
+  year    = {2012},
+  volume  = {29},
+  number  = {6},
+  pages   = {141-142},
+  doi     = {10.1109/MSP.2012.2211477}
+}
+@misc{zbontar2018fastMRI,
+  title         = {{fastMRI}: An Open Dataset and Benchmarks for Accelerated {MRI}},
+  author        = {Jure Zbontar and Florian Knoll and Anuroop Sriram and Tullie Murrell and Zhengnan Huang and Matthew J. Muckley and Aaron Defazio and Ruben Stern and Patricia Johnson and Mary Bruno and Marc Parente and Krzysztof J. Geras and Joe Katsnelson and Hersh Chandarana and Zizhao Zhang and Michal Drozdzal and Adriana Romero and Michael Rabbat and Pascal Vincent and Nafissa Yakubova and James Pinkerton and Duo Wang and Erich Owens and C. Lawrence Zitnick and Michael P. Recht and Daniel K. Sodickson and Yvonne W. Lui},
+  journal       = {ArXiv e-prints},
+  archiveprefix = {arXiv},
+  eprint        = {1811.08839},
+  year          = {2018}
+}
+
+@article{sodickson1997smash,
+  author   = {Sodickson, Daniel K. and Manning, Warren J.},
+  title    = {Simultaneous acquisition of spatial harmonics (SMASH): Fast imaging with radiofrequency coil arrays},
+  journal  = {Magnetic Resonance in Medicine},
+  volume   = {38},
+  number   = {4},
+  pages    = {591-603},
+  keywords = {fast imaging, RF coil array, simultaneous acquisition, MR image reconstruction},
+  doi      = {https://doi.org/10.1002/mrm.1910380414},
+  url      = {https://onlinelibrary.wiley.com/doi/abs/10.1002/mrm.1910380414},
+  eprint   = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/mrm.1910380414},
+  abstract = {Abstract SiMultaneous Acquisition of Spatial Harmonics (SMASH) is a new fast-imaging technique that increases MR image acquisition speed by an integer factor over existing fast-imaging methods, without significant sacrifices in spatial resolution or signal-to-noise ratio. Image acquisition time is reduced by exploiting spatial information inherent in the geometry of a surface coil array to substitute for some of the phase encoding usually produced by magnetic field gradients. This allows for partially parallel image acquisitions using many of the existing fast-imaging sequences. Unlike the data combination algorithms of prior proposals for parallel imaging, SMASH reconstruction involves a small set of MR signal combinations prior to Fourier transformation, which can be advantageous for artifact handling and practical implementation. A twofold savings in image acquisition time is demonstrated here using commercial phased array coils on two different MR-imaging systems. Larger time savings factors can be expected for appropriate coil designs.},
+  year     = {1997}
+}
+
+@article{donoho2006compressedsensing,
+  author  = {Donoho, D.L.},
+  journal = {IEEE Transactions on Information Theory},
+  title   = {Compressed sensing},
+  year    = {2006},
+  volume  = {52},
+  number  = {4},
+  pages   = {1289-1306},
+  doi     = {10.1109/TIT.2006.871582}
+}
+
+@misc{candes2005stable,
+  title         = {Stable Signal Recovery from Incomplete and Inaccurate Measurements},
+  author        = {Emmanuel Candes and Justin Romberg and Terence Tao},
+  year          = {2005},
+  eprint        = {math/0503066},
+  archiveprefix = {arXiv},
+  primaryclass  = {math.NA}
+}
+
+
+@article{griswold2002grappa,
+  author   = {Griswold, Mark A. and Jakob, Peter M. and Heidemann, Robin M. and Nittka, Mathias and Jellus, Vladimir and Wang, Jianmin and Kiefer, Berthold and Haase, Axel},
+  title    = {Generalized autocalibrating partially parallel acquisitions (GRAPPA)},
+  journal  = {Magnetic Resonance in Medicine},
+  volume   = {47},
+  number   = {6},
+  pages    = {1202-1210},
+  keywords = {parallel imaging, rapid MRI, RF coil arrays, SMASH, SENSE, PILS},
+  doi      = {https://doi.org/10.1002/mrm.10171},
+  url      = {https://onlinelibrary.wiley.com/doi/abs/10.1002/mrm.10171},
+  eprint   = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/mrm.10171},
+  abstract = {Abstract In this study, a novel partially parallel acquisition (PPA) method is presented which can be used to accelerate image acquisition using an RF coil array for spatial encoding. This technique, GeneRalized Autocalibrating Partially Parallel Acquisitions (GRAPPA) is an extension of both the PILS and VD-AUTO-SMASH reconstruction techniques. As in those previous methods, a detailed, highly accurate RF field map is not needed prior to reconstruction in GRAPPA. This information is obtained from several k-space lines which are acquired in addition to the normal image acquisition. As in PILS, the GRAPPA reconstruction algorithm provides unaliased images from each component coil prior to image combination. This results in even higher SNR and better image quality since the steps of image reconstruction and image combination are performed in separate steps. After introducing the GRAPPA technique, primary focus is given to issues related to the practical implementation of GRAPPA, including the reconstruction algorithm as well as analysis of SNR in the resulting images. Finally, in vivo GRAPPA images are shown which demonstrate the utility of the technique. Magn Reson Med 47:1202–1210, 2002. © 2002 Wiley-Liss, Inc.},
+  year     = {2002}
+}
+
+@article{pruessmann1999sense,
+  author   = {Pruessmann, Klaas P. and Weiger, Markus and Scheidegger, Markus B. and Boesiger, Peter},
+  title    = {SENSE: Sensitivity encoding for fast MRI},
+  journal  = {Magnetic Resonance in Medicine},
+  volume   = {42},
+  number   = {5},
+  pages    = {952-962},
+  keywords = {MRI, sensitivity encoding, SENSE, fast imaging, receiver coil array},
+  doi      = {https://doi.org/10.1002/(SICI)1522-2594(199911)42:5<952::AID-MRM16>3.0.CO;2-S},
+  url      = {https://onlinelibrary.wiley.com/doi/abs/10.1002/%28SICI%291522-2594%28199911%2942%3A5%3C952%3A%3AAID-MRM16%3E3.0.CO%3B2-S},
+  eprint   = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/%28SICI%291522-2594%28199911%2942%3A5%3C952%3A%3AAID-MRM16%3E3.0.CO%3B2-S},
+  abstract = {Abstract New theoretical and practical concepts are presented for considerably enhancing the performance of magnetic resonance imaging (MRI) by means of arrays of multiple receiver coils. Sensitivity encoding (SENSE) is based on the fact that receiver sensitivity generally has an encoding effect complementary to Fourier preparation by linear field gradients. Thus, by using multiple receiver coils in parallel scan time in Fourier imaging can be considerably reduced. The problem of image reconstruction from sensitivity encoded data is formulated in a general fashion and solved for arbitrary coil configurations and k-space sampling patterns. Special attention is given to the currently most practical case, namely, sampling a common Cartesian grid with reduced density. For this case the feasibility of the proposed methods was verified both in vitro and in vivo. Scan time was reduced to one-half using a two-coil array in brain imaging. With an array of five coils double-oblique heart images were obtained in one-third of conventional scan time. Magn Reson Med 42:952–962, 1999. © 1999 Wiley-Liss, Inc.},
+  year     = {1999}
+}
+
+@article{RUDIN1992259,
+  title    = {Nonlinear total variation based noise removal algorithms},
+  journal  = {Physica D: Nonlinear Phenomena},
+  volume   = {60},
+  number   = {1},
+  pages    = {259-268},
+  year     = {1992},
+  issn     = {0167-2789},
+  doi      = {https://doi.org/10.1016/0167-2789(92)90242-F},
+  url      = {https://www.sciencedirect.com/science/article/pii/016727899290242F},
+  author   = {Leonid I. Rudin and Stanley Osher and Emad Fatemi},
+  abstract = {A constrained optimization type of numerical algorithm for removing noise from images is presented. The total variation of the image is minimized subject to constraints involving the statistics of the noise. The constraints are imposed using Lanrange multipliers. The solution is obtained using the gradient-projection method. This amounts to solving a time dependent partial differential equation on a manifold determined by the constraints. As t → ∞ the solution converges to a steady state which is the denoised image. The numerical algorithm is simple and relatively fast. The results appear to be state-of-the-art for very noisy images. The method is noninvasive, yielding sharp edges in the image. The technique could be interpreted as a first step of moving each level set of the image normal to itself with velocity equal to the curvature of the level set divided by the magnitude of the gradient of the image, and a second step which projects the image back onto the constraint set.}
+}
+
+@misc{he2015deep,
+  title         = {Deep Residual Learning for Image Recognition},
+  author        = {Kaiming He and Xiangyu Zhang and Shaoqing Ren and Jian Sun},
+  year          = {2015},
+  eprint        = {1512.03385},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV}
+}
+
+@misc{paszke2019pytorch,
+  title         = {PyTorch: An Imperative Style, High-Performance Deep Learning Library},
+  author        = {Adam Paszke and Sam Gross and Francisco Massa and Adam Lerer and James Bradbury and Gregory Chanan and Trevor Killeen and Zeming Lin and Natalia Gimelshein and Luca Antiga and Alban Desmaison and Andreas Köpf and Edward Yang and Zach DeVito and Martin Raison and Alykhan Tejani and Sasank Chilamkurthy and Benoit Steiner and Lu Fang and Junjie Bai and Soumith Chintala},
+  year          = {2019},
+  eprint        = {1912.01703},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG}
+}
+
+@misc{wandb,
+  title  = {Experiment Tracking with Weights and Biases},
+  year   = {2020},
+  note   = {Software available from wandb.com},
+  url    = {https://www.wandb.com/},
+  author = {Biewald, Lukas}
+}
+
+@software{huggingfacediffusers,
+  author  = {Patrick von Platen and Suraj Patil and Anton Lozhkov and Pedro Cuenca and Nathan Lambert and Kashif Rasul and Mishig Davaadorj and Thomas Wolf},
+  title   = {Diffusers: State-of-the-art diffusion models},
+  date    = {2023-12-11},
+  url     = {https://github.com/huggingface/diffusers},
+  version = {1.2.0}
+}
+
+@software{jaxtyping,
+  author  = {Patrick Kidger},
+  title   = {jaxtyping},
+  date    = {2023-12-15},
+  url     = {https://github.com/google/jaxtyping},
+  version = {0.2.24}
+}
+
+
+@inproceedings{imagenet,
+  author    = {Deng, Jia and Dong, Wei and Socher, Richard and Li, Li-Jia and Kai Li and Li Fei-Fei},
+  booktitle = {2009 IEEE Conference on Computer Vision and Pattern Recognition},
+  title     = {ImageNet: A large-scale hierarchical image database},
+  year      = {2009},
+  volume    = {},
+  number    = {},
+  pages     = {248-255},
+  doi       = {10.1109/CVPR.2009.5206848}
+}
+
+@article{cifar,
+  title    = {CIFAR-10 (Canadian Institute for Advanced Research)},
+  journal  = {},
+  author   = {Alex Krizhevsky and Vinod Nair and Geoffrey Hinton},
+  year     = {},
+  url      = {http://www.cs.toronto.edu/~kriz/cifar.html},
+  abstract = {The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images. The dataset is divided into five training batches and one test batch, each with 10000 images. The test batch contains exactly 1000 randomly-selected images from each class. The training batches contain the remaining images in random order, but some training batches may contain more images from one class than another. Between them, the training batches contain exactly 5000 images from each class. },
+  keywords = {Dataset},
+  terms    = {}
+}
+
+
+@online{mreasykldivergence,
+  title   = {KL Divergence between 2 Gaussian Distributions},
+  author  = {Rishabh Gupta},
+  url     = {https://mr-easy.github.io/2020-04-16-kl-divergence-between-2-gaussian-distributions/},
+  year    = {2020},
+  urldate = {2023-12-08}
+}
+
 @misc{choi2021ilvr,
   title         = {ILVR: Conditioning Method for Denoising Diffusion Probabilistic Models},
   author        = {Jooyoung Choi and Sungwon Kim and Yonghyun Jeong and Youngjune Gwon and Sungroh Yoon},
   year          = {2021},
   eprint        = {2108.02938},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV}
+}
+
+@misc{saharia2022palette,
+  title         = {Palette: Image-to-Image Diffusion Models},
+  author        = {Chitwan Saharia and William Chan and Huiwen Chang and Chris A. Lee and Jonathan Ho and Tim Salimans and David J. Fleet and Mohammad Norouzi},
+  year          = {2022},
+  eprint        = {2111.05826},
   archiveprefix = {arXiv},
   primaryclass  = {cs.CV}
 }
