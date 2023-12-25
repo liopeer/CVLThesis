@@ -136,7 +136,7 @@ The derivation for the DDPM is similar
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{images/directsampling_comparison.png}
-    \caption[Direct Sampling with Varying Masks and Guidance Factors]{Direct Sampling with Varying Masks and Guidance Factors: a) - b) Reconstructions of two samples, reconstructed using different masks (vertical) and different guidance factors (horizontal). For comparison, the top row is always the original samples. Low guidance factors lead to samples with less contrast and less adherence to the original and high guidance factors combined can cause aliasing as observed in the lower right corner of a).}
+    \caption[Direct Sampling with Varying Masks and Guidance Factors]{Direct Sampling with Varying Masks and Guidance Factors: a) - b) Reconstructions of two samples, reconstructed using different masks (vertical) and different guidance factors (horizontal). For comparison, the top row is always the original samples. Low guidance factors lead to samples with less contrast and less adherence to the original, while high guidance factors combined with high accelerations can cause aliasing as observed in the lower right corner of a).}
 \end{figure}
 
 \begin{figure}[h]
@@ -149,13 +149,20 @@ The derivation for the DDPM is similar
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{images/kspacedistribution.png}
-    \caption[Noise Distribution of Latent K-Space]{Noise Distribution of Latent Space and Latent K-Space: a) Measured noise variances of forward process for image space as well as absolute, real and imaginary parts of k-space. The variances for the real and imaginary part are the same and were only shifted for visibility. They correspond to half the variances of the image space as can be seen in b) or when comparing the histograms in c), e) and f). The distribution of the absolute values of k-space follows the Rice distribution.}
+    \caption[Noise Distribution of Latent K-Space]{Noise Distribution of Latent Space and Latent K-Space: a) Measured noise variances of forward process for image space as well as absolute, real and imaginary parts of k-space. The variances for the real and imaginary part are the same and were only shifted for visibility. They correspond to half the variances of the image space as can be seen in b) or when comparing the histograms in c), e) and f). The distribution of the absolute values of k-space in d) follows the Rice distribution.}
     \label{fig:kspacedistribution}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{images/stepsplot.png}
-    \caption[Stepsplot for RePaint Resampling]{Stepsplot for RePaint Resampling}
+    \includegraphics[width=\textwidth]{images/samplingstrategies.png}
+    \caption[Sampling Strategies for DDPMs]{Sampling Strategies for DDPMs: This figure illustrates different strategies for trading off computation resources and sample quality. In order to make the details visible it is shown for a model with 500 timesteps, though the models in this work were trained on 1000 timesteps. Notable in the plot is the short-grained resampling, which is the resampling strategy used by Lugmayr et al~\autocite{lugmayr2022repaint} and they coined the terms \textit{jump length} ($j$) for the local region where resampling happens and \textit{resamplings} ($r$) for the number of resamplings in each localized area. Long-grained resampling repeats the sampling process over the last reverse diffusion timesteps, always shrinking it by $j$ timesteps with every iteration. The hope is that the latent representations at the start of a new resamplings are refined versions of the predictions from direct sampling at the corresponding timestep. By generalizing the time embedding, means and variances, it is further possible to make the model generalize to different numbers of timesteps, as illustrated with the slowdown and speedup.}
     \label{fig:stepsplot}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{images/t_embedding.png}
+    \caption[Plots of Time Encoding]{Time Encoding: a) The 3D surface plot of the time encodings shows that the low frequencies (encoded in the higher dimensions of the encoding) are responsible for differentiating between timesteps far apart, high frequencies for close timesteps. b) In order to condition the UNet on the time encodings, the encoding and decoding blocks include learned linear layers creating embeddings of the same dimension as the channels. The time embeddings are then added onto the hidden layer via a broadcasting operation.}
+    \label{fig:timeencoding}
 \end{figure}

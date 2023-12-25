@@ -147,11 +147,11 @@ The term $q(x_{t-1}|x_{t},x_0)$ is the true reverse process, conditioned on a si
 \end{equation}
 Ho et al.~\autocite{ho2020denoising} found that it works best, if the network is trained to predict the noise in the image directly and the means are then found through reparameterization
 \begin{equation}
-    \mu_{\theta}(x_t,t) = \frac{1}{\sqrt{\alpha_t}}x_t - \frac{1-\alpha_t}{\sqrt{1-\bar{alpha}_t}\sqrt{\alpha_t}}\hat{\epsilon}_{\theta}(x_t,t)
+    \mu_{\theta}(x_t,t) = \frac{1}{\sqrt{\alpha_t}}x_t - \frac{1-\alpha_t}{\sqrt{1-\bar{\alpha}_t}\sqrt{\alpha_t}}\hat{\epsilon}_{\theta}(x_t,t)
 \end{equation}
 which transforms the loss from before into
 \begin{equation}
-    \hat{\theta} = \argmin_{\theta}\frac{1}{2\beta(t)^2} \frac{(1-\alpha_t)^2}{(1-\bar{alpha}_t)\alpha_t} \left[ || \epsilon_0 - \hat{\epsilon}(x_t, t)  ||_2^2 \right]
+    \hat{\theta} = \argmin_{\theta}\frac{1}{2\beta(t)^2} \frac{(1-\alpha_t)^2}{(1-\bar{\alpha}_t)\alpha_t} \left[ || \epsilon_0 - \hat{\epsilon}(x_t, t)  ||_2^2 \right]
 \end{equation}
 
 
