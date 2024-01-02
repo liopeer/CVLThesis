@@ -5,7 +5,7 @@
 % Extended 13/02/2009 by Jan Lesniak - jlesniak@vision.ee.ethz.ch
 % Updated 16/03/2023 by Danda Pani Paudel - paudel@vision.ee.ethz.ch
 %% ----------------------------------------------------------------------------
-\documentclass[pdftex,10pt,openright,headsepline,twoside]{book}
+\documentclass[pdftex,11pt,openright,headsepline,twoside]{book}
 \usepackage[margin=1in,headheight=13.6pt]{geometry}
 
 \usepackage{paralist}		% List environment
@@ -37,6 +37,7 @@
 \usepackage{tabularx}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{cleveref}
 \usepackage{tikz}
 \DeclareMathOperator*{\argmax}{argmax}
 \DeclareMathOperator*{\argmin}{argmin}
@@ -162,9 +163,9 @@
 \pagestyle{empty} % even no page number
 
 \fancypagestyle{plain}{
-    \renewcommand{\headrulewidth}{0.0pt}
-    \fancyfoot{}
-    \fancyhead{}
+	\renewcommand{\headrulewidth}{0.0pt}
+	\fancyfoot{}
+	\fancyhead{}
 }
 
 % Title page, modify accordingly
@@ -178,7 +179,7 @@
 \vspace{-6cm}
 \vfill
 \begin{quote}
-    \input{chap/abstract.tex}
+	\input{chap/abstract.tex}
 \end{quote}
 \vfill
 
@@ -188,16 +189,16 @@
 \vspace{-6cm}
 \vfill
 \begin{quote}
-    \input{chap/ack.tex}
+	\input{chap/ack.tex}
 \end{quote}
 \vfill
 
 % % Chapter-pages etc. use the ``plain'' pagestyle - since we don't want to have a heading at all at chapter-pages, redefine plain accordingly. Don't forget the page number.
 \fancypagestyle{plain}{
-    \renewcommand{\headrulewidth}{0.0pt}
-    \fancyfoot{}
-    \fancyfoot[RO, LE]{\thepage}
-    \fancyhead{}
+	\renewcommand{\headrulewidth}{0.0pt}
+	\fancyfoot{}
+	\fancyfoot[RO, LE]{\thepage}
+	\fancyhead{}
 }
 
 \pagestyle{fancy}
@@ -211,8 +212,8 @@
 \cleardoublepage
 
 % Insert list of tables
-\listoftables
-\cleardoublepage
+%\listoftables
+%\cleardoublepage
 
 \newpage
 
@@ -226,7 +227,7 @@
 \input{chap/materialsandmethods.tex}
 \input{chap/experimentsandresults.tex}
 \input{chap/discussion.tex}
-\input{chap/conclusion.tex}
+%\input{chap/conclusion.tex}
 
 
 %% ----------------------------------------------------------------------------

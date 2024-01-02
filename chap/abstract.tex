@@ -5,15 +5,4 @@
 % Extended 13/02/2009 by Jan Lesniak - jlesniak@vision.ee.ethz.ch
 %% ----------------------------------------------------------------------------
 
-\noindent The abstract gives a concise overview of the work you have done. The reader shall be able to decide whether the work which has been done is interesting for him by reading the abstract. Provide a brief account on the following questions:
-
-\begin{itemize}
-    \item What is the problem you worked on? (Introduction)
-    \item How did you tackle the problem? (Materials and Methods)
-    \item What were your results and findings? (Results)
-    \item Why are your findings significant? (Conclusion)
-\end{itemize}
-
-\noindent The abstract should approximately cover half of a page, and does generally not contain citations.
-
-
+\noindent Unconditional DDPMs have the potential to be powerful priors for the reconstruction of undersampled MRI and this work explores several ways of conditioning DDPMs for this task. Prior work on image inpainting and image-to-image translation introduced a way of conditioning DDPMs by injecting known information into the latent representations, but this technique failed to translate to the task of MRI reconstruction. In order to identify issues with this conditioning method, variability in samples from DDPMs was studied, both in image and frequency space, in order to determine feature hierachies over the reverse diffusion process. The experiments did not succeed in alleviating the issues, but the interpretation of the DDPM as a score-based model offered a way of integrating DDPM priors into known iterative reconstruction schemes and produced competitive reconstruction results for high undersampling factors. The results with \textit{loss guidance} were even improved by optimizing over more iterations, which results in resampling the DDPM.
